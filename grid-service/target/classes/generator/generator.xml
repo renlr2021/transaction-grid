@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<context id="authorized-service">
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://127.0.0.1:3306/datacenter?useSSL=false&amp;useUnicode=true&amp;characterEncoding=utf-8" userId="root" password="a123456">
+			<property name="useInformationSchema" value="true" />
+		</jdbcConnection>
+
+		<javaModelGenerator targetPackage="com.vechain.grid.db.model" targetProject="src/main/java" />
+		<sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources" />
+		<javaClientGenerator targetPackage="com.vechain.grid.db.mapper" targetProject="src/main/java" type="XMLMAPPER" />
+
+		<table tableName="authorized_session" domainObjectName="SessionEntity">
+			<generatedKey column="id" sqlStatement="mysql" identity="true" />
+		</table>
+	</context>
+</generatorConfiguration>
+
+
+       
